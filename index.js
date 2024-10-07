@@ -116,8 +116,8 @@ console.log (text2);
 // PUT YOUR CODE HERE
 console.log ("*** Q5");
 let sum1 = floatingPoint + integer;
-let sum2 = integer + negative;
 console.log ("sum1 = ", sum1);
+let sum2 = integer + negative;
 console.log ("sum2 = ", sum2);
 sum1 += integer;
 sum2 += negative;
