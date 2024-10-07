@@ -59,13 +59,13 @@ console.log ("*** Q2");
 const floatingPoint = 1.22;
 const integer = 3;
 const negative = -5;
-const notANumber = "a";
+const notANumber = 4*"a";
 const bigNumber = 12345678901234567;
 
 console.log("This is a decimal, also called a floating point number: ", floatingPoint);
 console.log("This is a whole number, also called an integer: ", integer);
 console.log("This is a negative number: ", negative);
-console.log("You can't mulitply 4 by a word! ", notANumber *4);
+console.log("You can't mulitply 4 by a word! ", notANumber);
 console.log ("This is a big Number: ", bigNumber);
 
 
@@ -117,8 +117,8 @@ console.log (text2);
 console.log ("*** Q5");
 let sum1 = floatingPoint + integer;
 let sum2 = integer + negative;
-console.log ("Sum1 = ", sum1);
-console.log ("Sum2 = ", sum2);
+console.log ("sum1 = ", sum1);
+console.log ("sum2 = ", sum2);
 sum1 += integer;
 sum2 += negative;
 console.log("Sum1 plus integer", sum1);
@@ -266,10 +266,10 @@ console.log ("example num two places = ",  Math.round(exampleNum * 100) / 100);
 // PUT YOUR CODE HERE
 console.log ("*** Q11");
 
-var stringNum 
+
 const mathNum = 5;
 
-stringNum = "1" + mathNum;
+const stringNum = "1" + mathNum;
 const answer11 = stringNum * mathNum;
 console.log("string num = ", stringNum);
 console.log ("math num = ", mathNum);
@@ -328,7 +328,7 @@ const days = Math.floor(totalHourstoWait /24);
 const extraHours = totalHourstoWait % 24;
 console.log ("totalHourstoWait", totalHourstoWait);
 
-console.log (`${days} days and ${extraHours} hours until vacation`)
+console.log (`${days} days and ${extraHours} hours until vacation!`)
 
 
 
