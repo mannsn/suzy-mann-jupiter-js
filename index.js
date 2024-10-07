@@ -115,14 +115,20 @@ console.log (text2);
 
 // PUT YOUR CODE HERE
 console.log ("*** Q5");
+console.log ("floatingPoint", floatingPoint);
+console.log ("integer", integer);
+console.log("negative", negative);
+
+
 let sum1 = floatingPoint + integer;
 console.log ("sum1 = ", sum1);
 let sum2 = integer + negative;
 console.log ("sum2 = ", sum2);
+
 sum1 += integer;
 sum2 += negative;
-console.log("Sum1 plus integer", sum1);
-console.log("Sum2 plus negative", sum2);
+console.log("sum1 plus integer", sum1);
+console.log("sum2 plus negative", sum2);
 
 
 // Don't forget your console.logs!
@@ -267,10 +273,12 @@ console.log ("example num two places = ",  Math.round(exampleNum * 100) / 100);
 console.log ("*** Q11");
 
 
+const stringNum = "12345"
 const mathNum = 5;
 
-const stringNum = "1" + mathNum;
-const answer11 = stringNum * mathNum;
+
+
+const answer11 = Number(stringNum) * mathNum;
 console.log("string num = ", stringNum);
 console.log ("math num = ", mathNum);
 console.log ("stringNum * mathNum = ", answer11);
