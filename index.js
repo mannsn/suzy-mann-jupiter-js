@@ -174,7 +174,7 @@ console.log("Q5: ", numOfOdds(15));
 // PUT YOUR CODE HERE
 
 const empty = [];
-const full = ["dream", 19, "code", 24, 180];
+let full = ["dream", 19, "code", 24, 180];
 
 function arrayChecker(anArray) {
   let check = true;
@@ -252,6 +252,24 @@ console.log("Q8: ", insertInArray(full));
 //    Q9 different: false
 
 // PUT YOUR CODE HERE
+//var 1 if order matters
+const compareArraysV1 = (arr1, arr2) =>
+  arr1.length == arr2.length && arr1.every((el, i, arr) => arr[i] === arr2[i]);
+let compare = ["dream", 19, "code", 24];
+console.log("Q9 v1 if order matters: ", compareArraysV1(full, compare));
+
+//var 2 if order does not matter
+const count = (el, arr) => arr.filter((ele) => ele === el).length;
+const compareArraysV2 = (arr1, arr2) =>
+  arr1.length == arr2.length &&
+  arr1.every(
+    (el, i, arr) =>
+      arr.filter((ele) => ele === el).length ==
+        arr2.filter((ele) => ele === el).length && arr2.includes(el)
+  );
+full = ["dream", 19, 24, "code"];
+compare = ["dream", 19, "code", 24];
+console.log("Q9 v2 if order does not matter: ", compareArraysV2(full, compare));
 
 // ---------- QUESTION 10 ----------
 // Create a variable called 'numbers' and assign it an array with at least 3 numbers as elements (example: [10, 3, 4]).  Write a function called 'calculateTotal' that takes one array parameter and loops through the array in order to return the sum of all the array elements.
@@ -263,6 +281,9 @@ console.log("Q8: ", insertInArray(full));
 //    Q10: 17
 
 // PUT YOUR CODE HERE
+let numbers = [1, 2, 3];
+const calculateTotal = (arr) => arr.reduce((acc, el) => acc + el);
+console.log("Q10: ", calculateTotal(numbers));
 
 // ---------- QUESTION 11 ----------
 // Write two functions called 'findEvens' and 'findOdds' that each take one array parameter and each returns a NEW Array of all the even or odd numbers as indicated.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
@@ -277,6 +298,11 @@ console.log("Q8: ", insertInArray(full));
 //    Q11 odds: [3,19,7,93]
 
 // PUT YOUR CODE HERE
+const findEvens = (arr) => arr.filter((el) => !(el % 2));
+const findOdds = (arr) => arr.filter((el) => el % 2);
+let arr208 = [10, 2, 3, 19, 7, 6, 93];
+console.log("Q11 evens: ", findEvens(arr208));
+console.log("Q11 odds: ", findOdds(arr208));
 
 // ---------- QUESTION 12 ----------
 // Write a function called 'makeSquares' that takes one array parameter and returns a NEW Array with the squared values of each of the numbers.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
@@ -289,6 +315,14 @@ console.log("Q8: ", insertInArray(full));
 //    Q12: [4,25,64]
 
 // PUT YOUR CODE HERE
+function makeSquaresV1(arr) {
+  return arr.map((el) => el ** 2);
+}
+console.log("Q12 var 1: ", makeSquaresV1([2, 5, 8]));
+
+//var 2
+const makeSquaresV2 = (arr) => arr.map((el) => el ** 2);
+console.log("Q12 var 2: ", makeSquaresV2([2, 5, 8]));
 
 // ---------- BONUS QUESTION / STRETCH GOAL ----------
 // Back in the old days, the early 2000s, this was a famous technical interview question. Write a function definition that takes NO parameters. The function will loop from 1 to 15 and return an array of numbers. While looping, the function will check if the current value in the loop is divisible by 3, by 5, or by both. If the current value in the loop is divisible by 3, the function will add the string "fizz" to an array. If the current value in the loop is divisible by 5, the function will add the string "buzz" to the array. If the current value in the loop is divisible by both, the function will add the value "fizzbuzz" to the array. If the number isn't divisible by 3, 5, OR both, it will add the number to the array.  The function will return the array of values.
@@ -299,3 +333,35 @@ console.log("Q8: ", insertInArray(full));
 //    BONUS: [1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz',11,'fizz',13,14,'fizzbuzz']
 
 // PUT YOUR CODE HERE
+
+// var 2
+function fizzBuzzV2() {
+  let result = [];
+  for (let i = 1; i <= 15; i++) {
+    result.push(
+      !(i % 3) && !(i % 5)
+        ? "fizzbuzz"
+        : !(i % 3)
+        ? "fizz"
+        : !(i % 5)
+        ? "buzz"
+        : i
+    );
+  }
+  return result;
+}
+console.log("BONUS var 2: ", fizzBuzzV2());
+
+// var 3
+function fizzBuzzV3() {
+  return Array.from(Array(15)).map((_, i) =>
+    !((i + 1) % 3) && !((i + 1) % 5)
+      ? "fizzbuzz"
+      : !((i + 1) % 3)
+      ? "fizz"
+      : !((i + 1) % 5)
+      ? "buzz"
+      : i + 1
+  );
+}
+console.log("BONUS var 3: ", fizzBuzzV3());
