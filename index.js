@@ -1,668 +1,301 @@
-//--------------- IMPORTANT!!! ---------------
-
 // IF YOU HAVE NOT READ THE README.md FILE YET, double click on that file in the "Files" panel to the left now and read it before you begin your assignment!
 
 //---------- OVERVIEW AND INSTRUCTIONS ----------
 
-//# JavaScript Basics
-// This is the coding assigment for the first week of the Intro to Programming course from Code the Dream. The concepts touched on in this assignment include:
-//   - The basic syntax of the JavaScript
-//     programming language
-//   - Basic programming concepts like variables,
-//     data types, and conditional statements
-//   - How to troubleshoot programming problems
-
-// In this assignment you will write your own code. Your instructions are listed as "comments", meaning the instructions are grayed out and start with '//' at the beginning of the line of code. Put your answers immediately below the instructions for each question. As mentioned in the README.md file, the first few questions have console logs provided. The third question you'll need to complete the console log that was started for you. Use console logs for all the remaining questions to check your code output.  To ensure you get comfortable with and learn the syntax well, be sure your AI code completion options are off!  You can find instructions on how to do this in your README.md file under "Instructions".
-
-// ---------- QUESTION 1. ----------
-// Declaring and giving string values to variables.
-// Create three variables.  First let's make sure we're using "camel case" where all letters are lowercase except for the first letter of words that are in the middle.  So, your first variable should be titled "firstName" with the value of your first name as a string.  Your second variable should be titled "lastName" with the value of your last name as a string.  The last variable should be titled "country" with the value of the name of the country where you were born as a string.
-
-//PUT YOUR CODE HERE
-console.log("*** Q1");
-
-const firstName = "Suzy";
-const lastName = "Mann";
-const country = "United States";
-
-console.log("My first name is: ", firstName);
-console.log("My last name is: ", lastName);
-console.log("I was born in the country: ", country);
-
-// ---------- QUESTION 2. ----------
-// Declaring and giving numerical values to variables.
-// Create four variables.  One titled "floatingPoint" with the value of any floating point number you choose.  One titled "integer" with the value of any integer number you choose.  One titled "negative" with the value of any negative number you choose.  One titled "notANumber" with the value of 4 multipled by a string of your choice.
-//NOTE: Remember from your lessons that JavaScript can treat large numbers differently than you might expect.
-//STRETCH GOAL: You'll see "Stretch Goal"s throughout the course. Stretch Goals are optional, but are encouraged as they help you try your hand at something a little more advanced for the week/assignment/question. Create a fifth variable titled "bigNumber" that is 16 or more numbers long. Then write your console.log and see what happens as you play and practice working with large numbers.
-
-// PUT YOUR CODE HERE
-console.log("*** Q2");
-const floatingPoint = 1.22;
-const integer = 3;
-const negative = -5;
-const notANumber = 4 * "a";
-const bigNumber = 12345678901234567;
-
-console.log(
-  "This is a decimal, also called a floating point number: ",
-  floatingPoint
-);
-console.log("This is a whole number, also called an integer: ", integer);
-console.log("This is a negative number: ", negative);
-console.log("You can't mulitply 4 by a word! ", notANumber);
-console.log("This is a big Number: ", bigNumber);
-
-// ---------- Question 3. ----------
-// Declaring and giving boolean values to variables.
-// Create two variables.  Name the first variable anything you want and give it the value of true.  Name the second variable a different name than the first and give it the value of false.
-
-// PUT YOUR CODE HERE
-console.log("*** Q3");
-
-const test1 = true;
-const test2 = false;
-
-console.log("The variable I made true is: ", test1);
-//The output of the above should be true.
-console.log("The variable I made false is: ", test2);
-//The output of the above should be false.
-
-// ---------- QUESTION 4. ----------
-// String Concatenation
-// Create a variable that makes a concatenated string out of the variables you made in Question 1. Be sure you're using your Q1 variables and not making new ones.
-// Suggested text: Hello! My name is (your first name variable and last name variable concatenated here) and I was born in (your country variable here)
-// You can also choose to make the text between the variables strings and concatenate all of them together.
-// STRETCH GOAL: For this stretch goal, make a second variable that still concatenates your variable from Q1, but uses template literals.
-
-// PUT YOUR CODE HERE
-console.log("*** Q4");
-
-let text1 =
-  "Hello! My name is " +
-  firstName +
-  " " +
-  lastName +
-  " and I was born in the " +
-  country;
-console.log(text1);
-
-let text2 = `Hello! My name is ${firstName} ${lastName} and I was born in the ${country}`;
-console.log(text2);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 5. ----------
-// Numerical "concatenation" also known as Addition
-// Make two variables.  One will hold the addition of your your floating point and integer variables from Q2, the other should hold the addition of your integer and negative number from Q2.
-//STRETCH GOAL Use an augmented assignment (also called compound assignment) operator to change the value of your floating point and integer numbers by the amount of your integer and/or negative number
-
-// PUT YOUR CODE HERE
-console.log("*** Q5");
-console.log("floatingPoint", floatingPoint);
-console.log("integer", integer);
-console.log("negative", negative);
-
-let sum1 = floatingPoint + integer;
-console.log("sum1 = ", sum1);
-let sum2 = integer + negative;
-console.log("sum2 = ", sum2);
-
-sum1 += integer;
-sum2 += negative;
-console.log("sum1 plus integer", sum1);
-console.log("sum2 plus negative", sum2);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 6. ----------
-// String Methods
-// Create four variables named "length", "firstInitial", "lastInitial", and "capitalize".  Using string methods, assign the length of your first name (use your variable from Q1) to the "length" variable. Assign the first letter of your first name (use your variable from Q1) to the "firstInitial" variable.  Assign the LAST letter of your first name (use your variable from Q1) to the "lastInitial" variable.  Change your first name to all capital letters and assign it to the "capitalize" variable.
-//STRETCH GOAL: Create a variable called "weirdInitials". Using string methods, have weirdInitials result in the value of the LAST letters of any first and last names and should be capitalized.  Example: "Sally Smith"'s weird initials should be "YH" and "Jose Rodriguez"'s inititals should be "EZ"
-
-// PUT YOUR CODE HERE
-console.log("*** Q6");
-
-const length = firstName.length;
-const firstInitial = firstName.charAt(0);
-const lastInitial = firstName.charAt(length - 1);
-const capitalize = firstName.toUpperCase();
-console.log("length of first name = ", length);
-console.log("first initial of first name = ", firstInitial);
-console.log("last initial of first name = ", lastInitial);
-console.log("first name capitalized = ", capitalize);
-
-const length1 = lastName.length;
-const lastInitial1 = lastName.charAt(length1 - 1);
-const weirdInitials = lastInitial.toUpperCase() + lastInitial1.toUpperCase();
-console.log("weird initials = ", weirdInitials);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 7. ----------
-// Conditional Statements - part 1 of 3
-// Declare a variable named "answer7".  Then create a conditional if else statement that will assign the value of true to the answer7 variable if your integer from Q2 is greater than 10 and assign it false if it is not.
-// STRETCH GOAL: Make an if elseif else statement that assigns answer7 the value of "less than" if your integer from Q2 is less than 10, "equal to" if it's equal, and "greater than" if it's greater.
-
-// PUT YOUR CODE HERE
-console.log("*** Q7");
-
-const answer7 = integer > 10;
-
-console.log("answer7 = ", answer7);
-
-let answer7a;
-if (integer < 10) {
-  answer7a = "less than";
-} else if (integer === 10) {
-  answer7a = "equal to";
-} else {
-  answer7a = "greather than";
-}
-console.log("answer7a = ", answer7a);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 8. ----------
-// Conditional Statements - part 2 of 3
-// Declare a variable called "age" and assign it that value of your age in years.  Create a conditional statement that will console.log the phrase "Age is just a number!" if your age is less than or equal to 30 and "Young at heart!" if your age is greater than 30.
-//STRETCH GOAL: Combine your skills!  Use template literals to console.log your name in the phrase as in "Sally, age is just a number!" or "Jose, you're young at heart!"
-
-// PUT YOUR CODE HERE
-console.log("*** Q8");
-
-const age = 61;
-if (age <= 30) {
-  console.log("Age is just a number");
-} else {
-  console.log("Young at heart");
-}
-
-const age1 = 61;
-if (age1 <= 30) {
-  console.log(`${firstName} Age is just a number`);
-} else {
-  console.log(`${firstName} Young at heart`);
-}
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 9. ----------
-// Conditional Statements part 3 of 3
-// Create a variable "randomNum" to be a random number generator that randomly returns either the number 1, 2, or 3 (you can use this resource to help you solve how to do this part: https://www.w3schools.com/js/js_random.asp). Now let's make a "Magic 8 Ball" using if elseif else that returns a different phrase for each of the three possible numbers.
-// If your random number is 1, console.log the phrase "It is certain.".
-// If it is 2, console.log "Perhaps.".
-// If it is 3, console.log "Absolutely not.".
-// STRETCH GOAL: Complete Q9 using a switch statement instead of if elseif else.
-
-// PUT YOUR CODE HERE
-console.log("*** Q9");
-
-const randomNum = Math.floor(Math.random() * 3) + 1;
-console.log("random Num = ", randomNum);
-if (randomNum === 1) {
-  console.log("It is certain.");
-} else if (randomNum === 2) {
-  console.log("Perhaps.");
-} else if (randomNum === 3) {
-  console.log("Absolutely not.");
-}
-
-console.log("*** Question 9a");
-switch (randomNum) {
-  case 1:
-    console.log("It is certain.");
-    break;
-  case 2:
-    console.log("Perhaps.");
-    break;
-  case 3:
-    console.log("Absolutely not.");
-    break;
-}
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 10. ----------
-// Math calculations part 1 of 5
-// Declare a variable named "exampleNum".  Give it the value of a floating point number with 4 decimal places.  Using a Number method round it to the nearest two decimal place. Example if the number is 21.4572, exampleNum should become 21.46.
-// STRETCH GOAL: Achieve the same results as Q10 using Math methods instead of Number methods. HINT: you may need to alter the variable over a series of calculations/method uses.
-
-// PUT YOUR CODE HERE
-console.log("*** Q10");
-
-var exampleNum = 21.4567;
-console.log("example num initial value = ", exampleNum);
-
-console.log("example num two places = ", Math.round(exampleNum * 100) / 100);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 11. ----------
-// Math calculations part 2 of 5
-// Declare two variables named "stringNum" and "mathNum".  Assign stringNum a STRING of numbers and mathNUM numbers.  Create a third variable named "answer11" and have it multiply stringNum and mathNum.  Remember to convert your string in order for it to properly calculate!
-
-// PUT YOUR CODE HERE
-console.log("*** Q11");
-
-const stringNum = "12345";
-const mathNum = 5;
-
-const answer11 = Number(stringNum) * mathNum;
-console.log("string num = ", stringNum);
-console.log("math num = ", mathNum);
-console.log("stringNum * mathNum = ", answer11);
-// Don't forget your console.logs!
-
-// ---------- QUESTION 12. ----------
-// Math calculations part 3 of 5
-// Declare a variable named "diameter" and assign it an integer value. Through a series of math calculations and variables, calculate the "radius" (which is half the diameter), the "circumference" (which is 2 multiplied by the Math value pi, multiplied by the radius) and the "area" (which is the Math value pi, multiplied by the radius squared).
-
-// PUT YOUR CODE HERE
-console.log("*** Q12");
-
-const diameter = 3;
-const radius = diameter / 2;
-const circumference = 2 * Math.PI * radius;
-const area = Math.PI * radius ** 2;
-console.log("diameter = ", diameter);
-console.log("radius = ", radius);
-console.log("circumference = ", circumference);
-console.log("area = ", area);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 13. ----------
-// Math calculations part 4 of 5
-// Let's make a useful math problem - create a tip calculator! Declare two variables called "billTotal" and "tipPercentage". Assign billTotal a floating point number with two decimal places. Assign tipPercentage a floating point number between 0.1 and 0.9. Create a third variable called "tip" that will multiply tipPercentage and billTotal then use the addition assignment operator to add that amount back to billTotal. Example: if our bill 35.75 and we want to leave a 20% tip (0.2) our new billTotal should come out to 42.90.
-
-// PUT YOUR CODE HERE
-console.log("*** Q13");
-
-let billTotal = 10.15;
-console.log("Original bill total", billTotal);
-const tipPercentage = 0.2;
-const tip = billTotal * tipPercentage;
-billTotal += tip;
-console.log("bill total = ", billTotal);
-console.log("tip percentage = ", tipPercentage);
-console.log("tip = ", tip);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 14. ----------
-// Math calculations part 5 of 5
-// We don't always deal with measurements (like in question 12) or currency (like in the last question).  Let's work with time now.  Days are 24 hour increments, so we want to see how many hours beyond an even number of days it is until vacation!  Declare a variable called "totalHourstoWait" and assign it any integer number greater than 24 that you want. The declare a variable called "days" and divide totalHourstoWait by 24. Don't forget to round down or exclude any decimals from this total.  Next, declare a variable "extraHours" and use the modulo operator to find out how many hours beyond the number of days you'll still need to wait until vacation.  Finally, console.log a template literal phrase that lets you know how many days and hours you have to wait.  Example: if totalHourstoWait is 54, days should be 2, and extraHours should be 6 (because 2 days and 6 hours is 54 hours) so your console log should result in something like "2 days and 6 hours until vacation!".
-
-// PUT YOUR CODE HERE
-console.log("*** Q14");
-
-const totalHourstoWait = 30;
-const days = Math.floor(totalHourstoWait / 24);
-const extraHours = totalHourstoWait % 24;
-console.log("totalHourstoWait", totalHourstoWait);
-
-console.log(`${days} days and ${extraHours} hours until vacation!`);
-
-// Don't forget your console.logs!
-
-// ---------- QUESTION 15. ----------
-// Student's choice!
-// Look back at the past 14 questions.  Which one did you have the hardest time with? Now create a question of your own based on the same principle. Include in your comments why you made this question for yourself and how you solved it.
-
-// PUT YOUR CODE HERE
-
-// Don't forget your console.logs!
-
-console.log("*** Q15 - your choice");
-console.log("Hello World");
-
-//# JavaScript Functions
-// This is the coding assigment for the second week of the Intro to Programming course from Code the Dream. The concepts touched on in this assignment include:
-//   - Encapsulate code with Functions
-//   - Pass Information Into Functions
-//   - Arrow Functions
-
-// In this assignment you will write your own code. Your instructions are listed as "comments", meaning the instructions are grayed out and start with '//' at the beginning of the line of code. Put your answers immediately below the instructions for each question. As mentioned in the README.md file, you'll need to use console logs for all the questions to check your code output. You can output the return value of a function in a similar way to how you output variable values last week.  To use a function in a console.log you invoke/call the function as part of the console log like this:
+//# JavaScript Loops and Arrays
+// This is the coding assigment for the third week of the Intro to Programming course from Code the Dream. The concepts touched on in this assignment include:
+//   - Simplify Repetitive Tasks with Loops
+//   - Working with ‘for’ Loops
+//   - Understanding Arrays
+
+// In this assignment you will write your own code. Your instructions are listed as "comments", meaning the instructions are grayed out and start with '//' at the beginning of the line of code. Put your answers immediately below the instructions for each question. As mentioned in the README.md file, you'll need to use console logs for all the questions to check your code output. Using a function in a console.log is very similar to how you were using them with variables last week. To invoke/call the function use the syntax:
 
 //  console.log("Q#: ", functionName(anyInput))
 
 // As always, click the green Run button at the top of the screen to see the output of your called functions in the Console tab to the right of this screen. Check to make sure that the output you get in your Console is the expected output.  To ensure you get comfortable with and learn the syntax well, be sure your AI code completion options are off!  You can find instructions on how to do this in your README.md file under "Instructions".
 
-/ ---------- QUESTION 16. ----------/;
-//Create a function titled 'messageString'.  Inside the function,  declare a variable named 'message' and assign it the string "Welcome to Code the Dream".  Return the 'message' variable.
+// ---------- QUESTION 1 ----------
+// Write a function called 'repeat' that takes 1 integer parameter and, using a for or while loop, prints out the string "Hello World!" to the console the same number of times as the parameter. NOTE: for this question, since your console log should be inside your function, you only need to call/invoke the function after you write it rather than call/invoke it inside of a console.log.
 
-// EXAMPLE LOG:
-//    console.log("Q1: ", messageString());
+// EXAMPLE "LOG":
+//    repeat(3);
 // EXAMPLE OUTPUT:
-//    Q16: Welcome to Code the Dream!
+//    Hello World!
+//    Hello World!
+//    Hello World!
 
-//PUT YOUR CODE HERE
-function messageString() {
-  const message = "Welcome to Code the Dream";
-  return message;
+// PUT YOUR CODE HERE
+function repeat(integerNumber) {
+  for (let i = 0; i < integerNumber; i++) {
+    console.log("Hello World!");
+  }
 }
 
-// EXAMPLE LOG:
-console.log("Q16: ", messageString());
+console.log("Q1: ");
+repeat(3);
 
-// ---------- QUESTION 17. ----------
-// Create a function called 'month'.  Inside the function, declare a variable named 'today' that uses the Date object.  Your function should then return only the month of the 'today' variable.  You can return the month as a number or, if you'd like to stretch your skills, convert it to the word form.
-
-// EXAMPLE LOG:
-//    console.log("Q2: ", month());
-// EXAMPLE OUTPUT: (Will be different for each class but should be the current month.  For example if you're doing this assignment in January...)
-//    Q17: 01
-//    stretch goal should result in:
-//    Q17: January
-
-//PUT YOUR CODE HERE
-
-function month() {
-  let today = new Date();
-  return today.getMonth() + 1;
-}
-
-console.log("Q17: ", month());
-
-const months = [
-  "Default",
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-currentMonthWord = months[month()];
-console.log("Q17: ", currentMonthWord);
-
-// ---------- QUESTION 18. ----------
-// Create a function called 'combineStrings'.  Inside the function, declare two variables named 'string1' and 'string2'.  Assign them the strings 'Good' and 'Evening' respecitvely.  Return the two strings concatenated with a space in between.
+// ---------- QUESTION 2 ----------
+// Write a function called 'pyramidCounting' that takes 1 integer parameter and returns the sum of all of the numbers between 0 and the parameter.
 
 // EXAMPLE LOG:
-//    console.log("Q18: ", combineStrings());
+//    console.log("Q2: ", pyramidCounting(4));
 // EXAMPLE OUTPUT:
-//    Q18: Good Evening
+//    Q2: 10
+// The mathematical explanation of this is 0+1+2+3+4 = 10.
 
 //PUT YOUR CODE HERE
-function combineStrings() {
-  let string1 = "Good";
-  let string2 = "Evening";
-  return string1 + " " + string2;
+
+function pyramidCounting(integerNumber) {
+  let answer = 0;
+  for (let i = 0; i <= integerNumber; i++) {
+    answer = answer + i;
+  }
+  return answer;
 }
+console.log("Q2: ", pyramidCounting(4));
 
-console.log("Q18:", combineStrings());
-
-// ---------- QUESTION 19. ----------
-// Let's start working with parameters.  Create a function called 'useParams' that takes one parameter and returns that parameter with the all letters capitalized.
+// ---------- QUESTION 3 ----------
+// Write a function called 'noVowels' that take a string parameter and removes vowels from that string using a loop.
 
 // EXAMPLE LOG:
-//    console.log("Q19: ", useParams("hello"));
+//    console.log("Q3: ", noVowels(adventurous));
 // EXAMPLE OUTPUT:
-//    Q19: HELLO
+//    Q3: dvntrs
 
-//PUT YOUR CODE HERE
-function useParams(inputText) {
-  return inputText.toUpperCase();
+// PUT YOUR CODE HERE
+const vowels = ["a", "e", "i", "o", "u", "y"];
+
+function noVowels(stringParameter) {
+  let newString = "";
+
+  for (i = 0; i < stringParameter.length; i++) {
+    let isAVowel = false;
+
+    for (j = 0; j < vowels.length; j++) {
+      if (stringParameter[i] === vowels[j]) {
+        isAVowel = true;
+        break;
+      }
+    } //for
+
+    if (!isAVowel) {
+      newString = newString + stringParameter[i];
+    } //if
+  } //for
+
+  return newString;
+} //noVowels
+
+console.log("Q3: ", noVowels("adventurous"));
+console.log("Q3: ", noVowels("bc"));
+console.log("Q3: ", noVowels("ay"));
+console.log("Q3: ", noVowels(""));
+
+//A streamlined example
+//function removeVowels(str) {
+
+//    let vowels = "aeiouAEIOU";
+
+//   let result = ""
+
+//   for (let i = 0; i < str.length; i++) {
+
+//       if (!vowels.includes(str[i])) {
+
+//          result += str[i];
+
+//     }
+
+//}
+
+//return result;
+
+//}
+
+// ---------- QUESTION 4 ----------
+// Write a function called 'vowelCount' that takes 1 string parameter and returns the number of vowels in that string.
+
+// EXAMPLE LOG:
+//    console.log("Q4: ", vowelCount('I love to code.'));
+// EXAMPLE OUTPUT:
+//    Q4: 6
+
+// PUT YOUR CODE HERE
+function vowelCount(aString) {
+  let vowels = "aeiouyAEIOUY";
+  let count = 0;
+  for (let i = 0; i < aString.length; i++) {
+    if (vowels.includes(aString[i])) {
+      count++;
+    } //if
+  } //for
+  return count;
+} //function
+
+console.log("Q4: ", vowelCount("I love to code."));
+console.log("Q4: ", vowelCount("BCD"));
+console.log("Q4: ", vowelCount("AAA"));
+
+// ---------- QUESTION 5 ----------
+// Write a function called 'numOfOdds' that takes 1 integer parameter and returns the number of odd numbers between 0 and that number, including the number if it's odd. (Hint: Use the modulo operator)
+
+// EXAMPLE LOG:
+//    console.log("Q5: ", numOfOdds(15));
+// EXAMPLE OUTPUT:
+//    Q5: 8
+
+// PUT YOUR CODE HERE
+function numOfOdds(anInteger) {
+  let numberOdd = 0;
+
+  for (let i = 0; i <= anInteger; i++) {
+    let remainder = i % 2;
+
+    if (remainder != 0) {
+      ++numberOdd;
+    }
+  }
+
+  return numberOdd;
 }
 
-console.log("Q19: ", useParams("hello"));
+console.log("Q5: ", numOfOdds(15));
 
-// ---------- QUESTION 20. ----------
-// Let's consider how variable can be changed by a function. Create a variable named 'string3' and assign it the string "What I started with".  Create a function called 'changeWords' that takes one parameter, change the parameter to the string value "I changed this" and return the parameter.  This is NOT best practice (changing variable values inside functions).  This question demonstrates how console logging the same variable can give you two different values for that variable.  Be sure you discuss this concept with mentors!
+// ---------- QUESTION 6 ----------
+// Create two variables named 'empty' and 'full'.  Assign an empty array to the 'empty' variable and any array of strings or numbers to the 'full' variable.  Write a function called 'arrayChecker' that returns true if the array passed as a parameter is empty and false if not.  Check both the 'empty' and 'full' variables to make sure they are returning the expected values.
 
 // EXAMPLE LOGS:
-//    console.log("Q20: ", changeWords(string3));
-//    console.log("Q20 variable alone: ", string3);
+//    console.log("Q6 empty: ", arrayChecker(empty));
+//    console.log("Q6 not empty: ", arrayChecker(full));
 // EXAMPLE OUTPUTS:
-//    Q20: I changed this
-//    Q20 variable alone: What I started with
+//    Q6 empty: true
+//    Q6 not empty: false
 
 // PUT YOUR CODE HERE
-let string3 = "What I started with";
 
-function changeWords(inputText) {
-  inputText = "I changed this";
-  return inputText;
+const empty = [];
+const full = ["dream", 19, "code", 24, 180];
+
+function arrayChecker(anArray) {
+  let check = true;
+  if (anArray.length != 0) {
+    check = false;
+  }
+  return check;
 }
-console.log("Q20: ", changeWords(string3));
-console.log("Q20 variable alone: ", string3);
+console.log("Q6 empty: ", arrayChecker(empty));
+console.log("Q6 not empty: ", arrayChecker(full));
 
-// ---------- QUESTION 21. ----------
-// Let's use two parameters now and work with both. Create two variables named 'num1' and 'num2' and assign them integer values. Create a function called 'multiplyThese' that takes 2 parameters and returns the product  of the two parameters (as a reminder, a product is the resulting number when two numbers are multiplied together).
+// ---------- QUESTION 7 ----------
+// Write a function called 'getElementAt' that takes an array parameter and an integer parameter.  The function should return the element in the array at the given number index or 'null' if it doesn't exist.  Use your 'full' variable from Question 6 to test.
 
-// EXAMPLE LOG:
-//    console.log("Q6: ", multiplyThese(num1, num2));
-// EXAMPLE OUTPUT: (if num1 and num2 are 2 and 5 respectively))
-//    Q21: 10
-
-// PUT YOUR CODE HERE
-const num1 = 2;
-const num2 = 5;
-
-function multiplyThese(num1, num2) {
-  return num1 * num2;
-}
-
-console.log("Q21: ", multiplyThese(num1, num2));
-
-// ---------- QUESTION 22. ----------
-// Building on the last question, create a function called 'getAverage' that takes 2 parameters and returns their average (hint: there is no built-in average operator in JavaScript).  Use the variables (num1 and num2) you created in Question 6 to test your function.  NOTE: In some programming languages, the types of numbers you use in equations can effect what type of number (integer/floating point) you get as a result.  We suggest using 2.0 instead of 2 as you're calculating the average.
-
-// EXAMPLE LOG:
-//    console.log("Q7: ", getAverage(num1, num2));
-// EXAMPLE OUTPUT: (based on num1 and num2 above)
-//    Q21: 3.5
-
-// PUT YOUR CODE HERE
-
-function getAverage(num1, num2) {
-  return (num1 + num2) / 2.0;
-}
-console.log("Q22: ", getAverage(num1, num2));
-
-// ---------- QUESTION 23. ----------
-// Create a function called 'absDiff' that takes 2 parameters and returns the absolute difference between them. For example, if the first parameter is smaller than the second, the first parameter will be subtracted from the second. If the first parameter is larger than the second, the second parameter will be subtracted from the first. If they are both equal, return the first parameter subtracted by the second.  It's important to consider boundary cases - situations that may change how you expect your code to behave.  For this reason, work with same numbers and negative numbers as well to see if you get your absDiff function to calculate the absolute difference regardless of number type.
-
-// EXAMPLE LOG 1:
-//    console.log("Q8 first larger: ", absDiff(29, 5));
-// EXAMPLE OUTPUT: (if using the numbers 29 and 5 as in the example log)
-//    Q23 first larger: 24
-// EXAMPLE LOG 2:
-//    console.log("Q23 second larger: ", absDiff(3, 16));
-// EXAMPLE OUTPUT: (if using the numbers 3 and 16 as in the example log)
-//    Q23 second larger: 13
-// EXAMPLE LOG 3:
-//    console.log("Q23 same nums: ", absDiff(5, 5));
-// EXAMPLE OUTPUT 3: (if using the numbers 5 and 5 as in the example log)
-//    Q23 same nums: 0
-// EXAMPLE LOG 4:
-//    console.log("Q23 neg num: ", absDiff(-6, 5));
-// EXAMPLE OUTPUT 4: (if using the numbers -6 and 5 as in the example log)
-//    Q23 neg num: 11
-
-// PUT YOUR CODE HERE
-function absDiff(num1, num2) {
-  let result;
-  if (num1 < num2) {
-    result = num2 - num1;
-  } else if (num1 > num2) {
-    result = num1 - num2;
-  } else if (num1 === num2) {
-    result = num1 - num2;
+// EXAMPLE LOGS:
+//    console.log("Q7: ", getElementAt(full, 2));
+//    console.log("Q7: ", getElementAt(full, 7));
+// EXAMPLE OUTPUT: (if the array assigned to variable 'full' is ["dream", 19, "code", 24, 180])
+//    Q7: code
+//    Q7: null
+function getElementAt(anArray, anInteger) {
+  let result = anArray.at(anInteger);
+  if (result === undefined) {
+    result = null;
   }
   return result;
 }
+console.log("Q7: ", getElementAt(full, 2));
+console.log("Q7: ", getElementAt(full, 7));
 
-console.log("Q23 first larger: ", absDiff(29, 5));
-console.log("Q23 second larger: ", absDiff(3, 16));
-console.log("Q23 same nums: ", absDiff(5, 5));
-console.log("Q23 neg num: ", absDiff(-6, 5));
-
-// ---------- QUESTION 24. ----------
-// That was a lot of math! Now let's work with strings... Create two variables named 'word1' and 'word2' and assign them any strings you want.  Then create a function called 'biggestStringLength' that takes word1 and word2 as parameters and returns the length of the longer string. If they are of equal length, just return that length.  Stretch your skills by making an empty string and seeing what happens in that situation.
-
-// EXAMPLE LOG:
-//    console.log("Q9: ", biggestStringLength(word1, word2));
-// EXAMPLE OUTPUT: (if your word1 was 'Code' and word2 was 'Dream')
-//    Q24: 5
-
-// PUT YOUR CODE HERE
-let word1 = "Nicky";
-let word2 = "Sunny";
-
-function biggestStringLength(word1, word2) {
-  let word1Length = word1.length;
-  let word2Length = word2.length;
-  if (word1Length > word2Length) {
-    return word1Length;
-  } else if (word1Length < word2Length) {
-    return word2Length;
-  } else {
-    return word1Length;
-  }
-}
-
-console.log("Q24 Same: ", biggestStringLength(word1, word2));
-console.log("Q24 1st one bigger: ", biggestStringLength("small", "big"));
-console.log("Q24 2nd one bigger: ", biggestStringLength("small", "butterfly"));
-
-// NOTE: ONCE YOU START WORKING ON THE NEXT TWO QUESTIONS, WHEN YOU HIT RUN, YOU'LL HAVE SEVERAL POP-UP BOXES THAT APPEAR BEFORE ALL YOUR CODE WILL COMPLETE RUNNING IN THE CONSOLE.  IF YOU HAVE POP UP BLOCKERS YOU MAY RUN INTO ISSUES.
-
-// ---------- QUESTION 25. ----------
-// Let's explore dates now.  Create a variable named 'birthday' and assign it a prompt that will allow you to enter the date of your next birthday into an pop-up box.  Then create a function called 'birthdayCountdown' that takes birthday as a parameter and returns the number of days until your next birthday.  Remember that you may need to instruct the user in the prompt on what format they should use when entering their birthday so you can properly convert the data to something you can use in the function.  CAUTION: 2024 is a leap year!  STRETCH GOAL: As we mentioned in Question 8, you should consider boundary cases. What if the user didn't follow your instructions and put in invalid data? Include in your function a way to verify the data is valid, and handle it (ex. through an error or Alert, etc) if it is invlaid.
-// NOTE: If you have pop-up blockers on your web browser, you may run into problems with your prompt/alert.  Be sure you allow pop-ups from replit.com to avoid this.  ALSO you'll need to use this line of code to allow prompts to work:
-// const prompt = require('prompt-sync')();  *******Note when running from vscode, node.js should be installed, then run npm install prompt-sync, run code with node.index.js from terminal window
-// so be sure to include that when writing your code.
+// ---------- QUESTION 8 ----------
+// Write a function called 'insertInArray' that takes an array parameter, makes a NEW array with the value '0' inserted at the second position in the NEW array.  The function should return the NEW array.  Use your 'full' variable from Question 6 to test.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
+// let newArray = originalArray.slice()
+// LEARNING MOMENT: Also console log the variable 'full' to compare the new array to the original.
 
 // EXAMPLE LOG:
-//    console.log("Q10: ", birthdayCountdown(birthday));
-// EXAMPLE OUTPUT: (if your next birthday was March 15, 2024 and today was February 3, 2024)
-//    Q25: 41
+//    console.log("Q8: ", insertInArray(full));
+//    console.log("original array: ", full);
+// EXAMPLE OUTPUT: (if the array assigned to variable 'full' is ["dream", 19, "code", 24, 180])
+//    Q8: ["dream", 0, 19, "code", 24, 180]
+//    original array: ["dream", 19, "code", 24, 180]
 
 // PUT YOUR CODE HERE
-const prompt = require("prompt-sync")();
-let birthdayString = prompt(
-  "Enter date of your next birthday in the format mm-dd-yyyy: "
-);
+function insertInArray(anArray) {
+  let startArray = anArray.slice(0, 1);
+  startArray.push(0);
 
-function birthdayCountdown(birthdayString) {
-  const birthdayDate = new Date(birthdayString);
-  console.log(birthdayDate);
+  let endArray = anArray.slice(1, anArray.length);
 
-  //Check if birth date is okay
-  if (!isNaN(birthdayDate)) {
-    const today = new Date();
-    console.log(today);
-    const diffTime = Math.abs(birthdayDate - today);
-    console.log(diffTime);
+  const newArray = startArray.concat(endArray);
 
-    //Convert to days - difftime was in miliseconds
-    const diffDays = Math.ceil(diffTime / 86400 / 1000);
-    return diffDays;
-  } else {
-    console.log("Input times are invalid");
-    return 0;
-  }
+  return newArray;
 }
 
-console.log(
-  "Q25: ",
-  birthdayCountdown(birthdayString),
-  "days to your birthday"
-);
+console.log("Q8: ", insertInArray(full));
 
-//
+// ---------- QUESTION 9 ----------
+// Write a function called 'compareArrays' that takes two Array parameters (containing numbers or strings only) and returns true if they are equal, false if not.  The purpose of this function should be to look at each element of the two arrays and compare them, returning false when they either hit two items that don't match, or returning false if the two arrays themselves are different lengths. You can test this with the 'empty' and 'full' variables from Question 6, and/or you can create a variable called 'compare' and assign it an array identical to 'full' to compare those.  To further test your function's accuracy, create a new variable called 'part' that is a partial copy of the 'full' variable and test that as well.
 
-// ---------- QUESTION 26. ----------
-// If we work with dates, we should work with time also.  Create a variable named 'startTime' and assign it a prompt that will allow the user to enter a start time.  Create a variable named 'endTime' and assign it a prompt that will allow the user to enter an end time.  Then create a function called 'timeDifference' that takes startTime and endTime as parameters and returns the number of hours and minutes between the start and end times.  Remember that you may need to instruct the user in the prompt on what format they should use when entering their times so you can properly convert the data to something you can use in the function.  STRETCH GOAL: As we mentioned in Question 8 and 10, you should consider boundary cases. What if the user didn't follow your instructions and put in invalid data? Include in your function a way to verify the data is valid, and handle it (ex. through an error or alert, etc) if it is invlaid.
-// NOTE: If you have pop-up blockers on your web browser, you may run into problems with your alerts.  Be sure you allow pop-ups from replit.com to avoid this.
+// REMEMBER: In JavaScript, 1 === '1' is false, but 1 == '1' is true. You'll need to use the triple equals operator which is more strict because it compares data type.
 
 // EXAMPLE LOG:
-//    console.log("Q11: ", timeDifference(startTime, endTime));
-// EXAMPLE OUTPUT: (if startTime was 12:37pm and endTime was 3:19pm)
-//    Q11: 2 hours and 42 minutes
+//    console.log("Q9 same: ", compareArrays(full, compare));
+// EXAMPLE OUTPUT: (if both arrays assigned to variable 'full' and 'compare' are ["dream", 19, "code", 24])
+//    Q9 same: true
+
+// EXAMPLE LOG:
+//    console.log("Q9 different: ", compareArrays(full, empty));
+// EXAMPLE OUTPUT: (if using variables from Question 6)
+//    Q9 different: false
+
+// EXAMPLE LOG:
+//    console.log("Q9 partial: ", compareArrays(full, part));
+// EXAMPLE OUTPUT: (if 'full' variable is ["dream", 19, "code", 24] and if 'part' variable is ["dream", 19, "code"])
+//    Q9 different: false
 
 // PUT YOUR CODE HERE
 
-function convertTo24Hour(time) {
-  // Check if the input is valid
-  /*const regex = /^(0?[1-9]|1[0-2]):([0-5][0-9]) ?([AaPp][Mm])$/;
-  const match = time.match(regex);
+// ---------- QUESTION 10 ----------
+// Create a variable called 'numbers' and assign it an array with at least 3 numbers as elements (example: [10, 3, 4]).  Write a function called 'calculateTotal' that takes one array parameter and loops through the array in order to return the sum of all the array elements.
+// STRETCH GOAL: use the `reduce()` method
 
-  if (!match) {
-      throw new Error("Invalid time format. Please use 'hh:mm AM/PM'.");
-  }
-
-  let [_, hours, minutes, period] = match;*/
-
-  // Split the input string into time and period (AM/PM)
-  const parts = time.split(" ");
-  const timeParts = parts[0].split(":");
-  console.log (parts, timeParts);
-
-  // Extract hours and minutes
-  let hours = parseInt(timeParts[0], 10);
-  const minutes = parseInt(timeParts[1], 10);
-  const period = parts[1].toUpperCase(); // Convert period to uppercase for consistency
-
-  if (period.toLowerCase() === "pm" && hours !== 12) {
-    hours += 12; // Convert PM hours (except for 12 PM)
-  } else if (period.toLowerCase() === "am" && hours === 12) {
-    hours = 0; // Convert 12 AM to 0 hours
-  }
-
-  // Format hours and minutes to ensure two digits
-  const formattedHours = String(hours).padStart(2, "0");
-  const formattedMinutes = String(minutes).padStart(2, "0");
-
-  return `${formattedHours}:${formattedMinutes}`;
-}
-
-function timeDifference(startTime, endTime) {
-  const newStartTime = convertTo24Hour(startTime);
-  const newEndTime = convertTo24Hour(endTime);
-
-  let hours = 0;
-  let minutes = 0;
-  let diffTime = 0;
-
-  //Create date objects using the same date
-  const time1 = new Date(`2000-01-01T${newStartTime}:00`);
-  const time2 = new Date(`2000-01-01T${newEndTime}:00`);
-
-  //Compare the times - difference is in milisecionds
-  if (time2 >= time1) {
-    diffTime = time2 - time1;
-
-    //Convert to minutes
-    minutes = Math.floor((diffTime / (1000 * 60)) % 60);
-
-    //Convert to hours
-    hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
-  } else {
-    console.log("Invalid start time/end time");
-    console.log("Start time = ", time1);
-    console.log("End  time = ", time2);
-  }
-
-  return `${hours} hours and ${minutes} minutes`;
-}
-const startTime = prompt("Enter start time: (hh:mm AM/PM) ");
-const endTime = prompt("Enter end time: (hh:mm AM/PM) ");
-console.log("Q26: ", timeDifference(startTime, endTime));
-
-// ---------- QUESTION 27. ----------
-// Student's choice!
-// Look back at the past 11 questions.  Which one did you have the hardest time with? Now create a question of your own based on the same principle. Include in your comments why you made this question for yourself and how you solved it.
+// EXAMPLE LOG:
+//    console.log("Q10: ", calculateTotal(numbers));
+// EXAMPLE OUTPUT: (if the array assigned to variable 'numbers' is [3, 4, 2 ,8])
+//    Q10: 17
 
 // PUT YOUR CODE HERE
 
-// Don't forget your console.logs!
-console.log("Q27", "hello world");
+// ---------- QUESTION 11 ----------
+// Write two functions called 'findEvens' and 'findOdds' that each take one array parameter and each returns a NEW Array of all the even or odd numbers as indicated.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
+// let newArray = originalArray.slice()
+// STRETCH GOAL: use the `filter()` method
+
+// EXAMPLE LOG:
+//    console.log("Q11 evens: ", findEvens([10,2,3,19,7,6,93]));
+//    console.log("Q11 odds: ", findOdds([10,2,3,19,7,6,93]));
+// EXAMPLE OUTPUT:
+//    Q11 evens: [10,2,6]
+//    Q11 odds: [3,19,7,93]
+
+// PUT YOUR CODE HERE
+
+// ---------- QUESTION 12 ----------
+// Write a function called 'makeSquares' that takes one array parameter and returns a NEW Array with the squared values of each of the numbers.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
+// let newArray = originalArray.slice()
+// STRETCH GOAL: use the `map()` method
+
+// EXAMPLE LOG:
+//    console.log("Q12: ", makeSquares([2,5,8]));
+// EXAMPLE OUTPUT:
+//    Q12: [4,25,64]
+
+// PUT YOUR CODE HERE
+
+// ---------- BONUS QUESTION / STRETCH GOAL ----------
+// Back in the old days, the early 2000s, this was a famous technical interview question. Write a function definition that takes NO parameters. The function will loop from 1 to 15 and return an array of numbers. While looping, the function will check if the current value in the loop is divisible by 3, by 5, or by both. If the current value in the loop is divisible by 3, the function will add the string "fizz" to an array. If the current value in the loop is divisible by 5, the function will add the string "buzz" to the array. If the current value in the loop is divisible by both, the function will add the value "fizzbuzz" to the array. If the number isn't divisible by 3, 5, OR both, it will add the number to the array.  The function will return the array of values.
+
+// EXAMPLE LOG:
+//    console.log("BONUS: ", fizzBuzz();
+// EXAMPLE OUTPUT:
+//    BONUS: [1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz',11,'fizz',13,14,'fizzbuzz']
+
+// PUT YOUR CODE HERE
