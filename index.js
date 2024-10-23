@@ -73,18 +73,11 @@ console.log("Q2: ", aboutPet);
 
 // PUT YOUR CODE HERE
 
-/*const myPet1  = {
-  name: "Sunny", 
-  species: "dog" , 
-  color: "black",
-  ageProperty: 6,
-  age : function () {
-    return this.ageProperty;
-  }
-};*/
 
-myPet.age=6;
-myPet.
+myPet.ageProperty=12;
+myPet.age = function () {
+  return this.ageProperty;
+};
 console.log("Q3: ", myPet.age());
 
 // ---------- QUESTION 4 ----------
@@ -106,6 +99,15 @@ function isDog(aPet){
     return false;
 }
 
+const myPet1  = {
+  name: "Sunny", 
+  species: "dog" , 
+  color: "black",
+  ageProperty: 7,
+  age : function () {
+    return this.ageProperty;
+  }
+};
 console.log("Q4: ", isDog(myPet));
 console.log("Q4: ", isDog(myPet1));
 // ---------- QUESTION 5 ----------
