@@ -73,7 +73,7 @@ console.log("Q2: ", aboutPet);
 
 // PUT YOUR CODE HERE
 
-const myPet1  = {
+/*const myPet1  = {
   name: "Sunny", 
   species: "dog" , 
   color: "black",
@@ -81,9 +81,11 @@ const myPet1  = {
   age : function () {
     return this.ageProperty;
   }
-};
+};*/
 
-console.log("Q3: ", myPet1.age());
+myPet.age=6;
+myPet.
+console.log("Q3: ", myPet.age());
 
 // ---------- QUESTION 4 ----------
 // Now, let's see how we can use data within objects in functions.  Write a function called 'isDog' that takes one object parameter.  In the function, create a variable called 'speciesChecker' and assign it the value 'dog'.  Then, still in the function, return true if the object's species value is equal to the variable 'speciesChecker', or false if not.  
