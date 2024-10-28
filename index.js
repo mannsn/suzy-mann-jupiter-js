@@ -167,7 +167,7 @@ console.log ("Q5 library after",library);
 // Bibeault, and Maras', libraryID: 5729, type: 'book'},
 //    ]
 
-/*// PUT YOUR CODE HERE
+// PUT YOUR CODE HERE
 function addTypeProperty(anArray) {
   const newArray = [...anArray];
   for (let i = 0; i < newArray.length; i++) {
@@ -175,11 +175,11 @@ function addTypeProperty(anArray) {
   }
   return newArray;
 }
-console.log("Q6: ", addTypeProperty(library));*/
 
-function addTypeProperty(arr) {
+
+/*function addTypeProperty(arr) {
   return arr.map((item) => ({ ...item, type: "book" }));
-}
+}*/
 
 console.log("Q6 before map", library);
 console.log("Q6 map: ", addTypeProperty(library));
@@ -210,6 +210,9 @@ function addNewObject(anArray, anObject) {
   newArray.push(anObject);
   return newArray;
 }
+
+
+/*function addNewObject(array, newObject) { return [...array, newObject];*/
 
 console.log(
   "Q7: ",
