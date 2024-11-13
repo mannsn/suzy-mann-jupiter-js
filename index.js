@@ -206,9 +206,14 @@ console.log("Q6 after map", library);
 
 // PUT YOUR CODE HERE
 function addNewObject(anArray, anObject) {
-  const newArray = [...anArray];
-  //newArray.push(anObject);
-  /*If object also needs to be a copy*/
+  /*const newArray = [...anArray];*/
+
+  //If new Array needs to be a deep copy
+   const newArray = anArray.map((item) => ({ ...item }));
+   
+   /*newArray.push(anObject);*/
+
+  //If object also needs to be a copy
   newArray.push({ ...anObject });
   return newArray;
 }
