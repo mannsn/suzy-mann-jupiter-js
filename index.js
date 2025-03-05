@@ -63,7 +63,7 @@ console.log("Q2: ", pyramidCounting(4));
 //    Q3: dvntrs
 
 // PUT YOUR CODE HERE
-const vowels = ["a", "e", "i", "o", "u", "y"];
+const vowels = "aeiouAEIOU";
 
 function noVowels(stringParameter) {
   let newString = "";
@@ -88,29 +88,9 @@ function noVowels(stringParameter) {
 
 console.log("Q3: ", noVowels("adventurous"));
 console.log("Q3: ", noVowels("bc"));
-console.log("Q3: ", noVowels("ay"));
+console.log("Q3: ", noVowels("ao"));
 console.log("Q3: ", noVowels(""));
 
-//A streamlined example
-//function removeVowels(str) {
-
-//    let vowels = "aeiouAEIOU";
-
-//   let result = ""
-
-//   for (let i = 0; i < str.length; i++) {
-
-//       if (!vowels.includes(str[i])) {
-
-//          result += str[i];
-
-//     }
-
-//}
-
-//return result;
-
-//}
 
 // ---------- QUESTION 4 ----------
 // Write a function called 'vowelCount' that takes 1 string parameter and returns the number of vowels in that string.
@@ -122,7 +102,7 @@ console.log("Q3: ", noVowels(""));
 
 // PUT YOUR CODE HERE
 function vowelCount(aString) {
-  let vowels = "aeiouyAEIOUY";
+  let vowels = "aeiouAEIOU";
   let count = 0;
   for (let i = 0; i < aString.length; i++) {
     if (vowels.includes(aString[i])) {
@@ -204,6 +184,16 @@ function getElementAt(anArray, anInteger) {
 }
 console.log("Q7: ", getElementAt(full, 2));
 console.log("Q7: ", getElementAt(full, 7));
+
+function getElementAtv2(arr, index) {
+  if (index >= 0 && index < arr.length) {
+    return arr[index];
+  } else {
+    return null;
+  }
+}
+console.log("Q7: ", getElementAtv2(full, 2));
+console.log("Q7: ", getElementAtv2(full, 7));
 
 // ---------- QUESTION 8 ----------
 // Write a function called 'insertInArray' that takes an array parameter, makes a NEW array with the value '0' inserted at the second position in the NEW array.  The function should return the NEW array.  Use your 'full' variable from Question 6 to test.  NOTE: Assigning an array to a new variable does not make a copy, it's another reference to the same array.  To make a copy you can use the slice() method as in this example:
