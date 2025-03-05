@@ -241,13 +241,40 @@ console.log("Q8: ", insertInArray(full));
 // EXAMPLE OUTPUT: (if 'full' variable is ["dream", 19, "code", 24] and if 'part' variable is ["dream", 19, "code"])
 //    Q9 different: false
 
-// PUT YOUR CODE HERE
+//Solution 1
+function compareArrays(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Testing with 'empty' and 'full' variables from Question 6
+console.log("Q9 - empty and full: ", compareArrays(empty, full));
+
+// Creating a variable 'compare' as a copy of 'full' array
+let compare = [...full];
+console.log("Q9 - full and compare: ", compareArrays(full, compare));
+
+// Creating a variable 'part' as a partial copy of 'full' array
+let part = full.slice(0, 2);
+console.log("Q9 - full and part: ", compareArrays(full, part));
+
+//Solution 2
 //var 1 if order matters
 const compareArraysV1 = (arr1, arr2) =>
   arr1.length == arr2.length && arr1.every((el, i, arr) => arr[i] === arr2[i]);
-let compare = ["dream", 19, "code", 24];
-console.log("Q9 v1 if order matters: ", compareArraysV1(full, compare));
+let compare1 = ["dream", 19, "code", 24];
+console.log("Q9 v1 if order matters: ", compareArraysV1(full, compare1));
 
+//Solution 3
 //var 2 if order does not matter
 const count = (el, arr) => arr.filter((ele) => ele === el).length;
 const compareArraysV2 = (arr1, arr2) =>
@@ -259,7 +286,7 @@ const compareArraysV2 = (arr1, arr2) =>
   );
 full = ["dream", 19, 24, "code"];
 compare = ["dream", 19, "code", 24];
-console.log("Q9 v2 if order does not matter: ", compareArraysV2(full, compare));
+console.log("Q9 v2 if order does not matter: ", compareArraysV2(full, compare1));
 
 // ---------- QUESTION 10 ----------
 // Create a variable called 'numbers' and assign it an array with at least 3 numbers as elements (example: [10, 3, 4]).  Write a function called 'calculateTotal' that takes one array parameter and loops through the array in order to return the sum of all the array elements.
