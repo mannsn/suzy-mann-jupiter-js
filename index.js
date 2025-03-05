@@ -182,8 +182,10 @@ function getElementAt(anArray, anInteger) {
   }
   return result;
 }
+let emptArray = [];
 console.log("Q7: ", getElementAt(full, 2));
 console.log("Q7: ", getElementAt(full, 7));
+console.log ("Q7", getElementAt(empty, 1));
 
 function getElementAtv2(arr, index) {
   if (index >= 0 && index < arr.length) {
