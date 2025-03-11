@@ -645,7 +645,7 @@ function timeDifference(startTime, endTime) {
     minutes = Math.floor((diffTime / (1000 * 60)) % 60);
 
     //Convert to hours
-    hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+    hours = Math.floor((diffTime / (1000 * 60 * 60)) % 60);
   } else {
     console.log("Invalid start time/end time");
     console.log("Start time = ", time1);
