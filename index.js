@@ -266,7 +266,7 @@ function pairProduct(arr, product) {
   for (let i = 0; i < arr.length; i++) {
     console.log(product % arr[i]);
 
-    //Check for remainder
+    //Check for remainder and don't forget to do the rest
     if (product % arr[i] === 0) {
 
       //No remainder - determine complement
