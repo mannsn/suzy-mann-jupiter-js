@@ -146,10 +146,7 @@ console.log("weird initials = ", weirdInitials);
 // PUT YOUR CODE HERE
 console.log("*** Q7");
 
-const answer7 = integer > 10;
-
-console.log("answer7 = ", answer7);
-
+//With if/else
 let answer7a;
 if (integer < 10) {
   answer7a = "less than";
@@ -159,6 +156,15 @@ if (integer < 10) {
   answer7a = "greather than";
 }
 console.log("answer7a = ", answer7a);
+
+//With ternary
+let answer7b = integer < 10
+  ? "less than"
+  : integer === 10
+    ? "equal to"
+    : "greater than";
+
+console.log("answer7b = ", answer7b);
 
 // Don't forget your console.logs!
 
