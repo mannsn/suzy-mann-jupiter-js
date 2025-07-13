@@ -176,6 +176,7 @@ console.log("answer7b = ", answer7b);
 // PUT YOUR CODE HERE
 console.log("*** Q8");
 
+//Concatenation and if
 const age = 61;
 if (age <= 30) {
   console.log("Age is just a number");
@@ -183,12 +184,17 @@ if (age <= 30) {
   console.log("Young at heart");
 }
 
+//Templates and if
 const age1 = 61;
 if (age1 <= 30) {
   console.log(`${firstName} Age is just a number`);
 } else {
   console.log(`${firstName} Young at heart`);
 }
+
+//Templates and ternary
+const age2 = 61;
+console.log(`${firstName} ${age2 <= 30 ? "Age is just a number" : "Young at heart"}`);
 
 // Don't forget your console.logs!
 
