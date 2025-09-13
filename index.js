@@ -143,7 +143,7 @@ console.log("Q6:");
 printPets(pets);
 
 //---------- QUESTION 7 --- Write a construction function to create Pet objects------
-//Write a JavaScript constructor function named Dog that defines a blueprint for creating Dog objects. Each Dog object should include the following properties: name, breed, and age. Using this constructor, create two distinct Dog instances with different values for each property. Finally, use console.log() to display both Dog instances in the console.
+//Write a JavaScript constructor function named Dog that defines a blueprint for creating Dog objects. Each Dog object should include the following properties: name, breed, and age. Using this constructor, create two distinct Dog instances (dog1 and dog2) with different values for each property. Finally, use console.log() to display both Dog instances in the console.
 
 //EXAMPLE CALL:
 // Creating new Dog instances
@@ -155,18 +155,18 @@ printPets(pets);
 //console.log("Q7", dog2);
 
 // EXAMPLE OUTPUT:
-//Q7: Dog { name: 'Kroger', bred: 'greyhound', age: 8 }
-//Q7: Dog { name: 'Destiny', bred: 'shepherd', age: 14 }
+//Q7: Dog { name: 'Kroger', breed: 'greyhound', age: 8 }
+//Q7: Dog { name: 'Destiny', breed: 'shepherd', age: 14 }
 
 
 // PUT YOUR CODE HERE
 function Dog (name, breed, age){
   this.name = name;
-  this.bred = breed;
+  this.breed = breed;
   this.age = age;
 }
 
-// Creating new Person instances
+// Creating new Dog instances
 let dog1 = new Dog("Kroger", "greyhound", 8);
 let dog2 = new Dog("Destiny","shepherd" , 14);
 
@@ -174,5 +174,97 @@ let dog2 = new Dog("Destiny","shepherd" , 14);
 console.log("Q7:", dog1);
 console.log("Q7:", dog2);
 
+
+//---------- QUESTION 8 --- Write a function that compares two objects-----
+//Write a function that compares two Dog instances objects and checks if they have the same keys and values. Write a function called areObjectsEqual(obj1, obj2) that returns true if both objects have the same keys and values, and false otherwise. 
+//Reuse:
+// - dog1 from question 7
+// - dog2 from question 7
+// Then, create:
+// - dog3: an object with the same keys and values as dog1.
+// - dog4: an object based on dog1 but with one additional key.
+
+// Use console.log() to test your function with various object comparisons.
+//EXAMPLE CALL:
+//console.log("Q8: Are objects equal - different values:", areObjectsEqual(dog1, dog2)); 
+//console.log("Q8: Are objects equal? - same key and values:", areObjectsEqual(dog1, dog3)); 
+//console.log("Q8: Are objects equal? - different keys:", areObjectsEqual(dog1, dog4)); 
+
+// EXAMPLE OUTPUT:
+
+// PUT YOUR CODE HERE
+let dog3 = new Dog("Kroger", "greyhound", 8);
+let dog4 = new Dog("Destiny","shepherd" , 14);
+dog4.extraproperty = "extra";
+
+// Step 2: Function to compare objects
+function areObjectsEqual(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  // Check if number of keys is the same
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  // Check if values for each key are the same
+  for (let key of keys1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Step 3: Test the function
+console.log("Q8: Are objects equal - different values:", areObjectsEqual(dog1, dog2)); 
+console.log("Q8: Are objects equal? - same key and values:", areObjectsEqual(dog1, dog3)); 
+console.log("Q8: Are objects equal? - different keys:", areObjectsEqual(dog1, dog4)); 
+
+
+//---------- QUESTION 9 --- Date object for current date-----
+//Learn how to use the built-in Date object in JavaScript to retrieve and display the current date. See https://www.w3schools.com/js/js_dates.asp as a reference. Create a variable called currentDate. Assign it the value of a new Date() object.
+
+//EXAMPLE CALL:
+//console.log("Q9: Current Date:", currentDate);
+
+// EXAMPLE OUTPUT: Note Time will differ, below is an example only
+//Q9: Current Date: 2025-09-13T23:47:23.858Z 
+
+// PUT YOUR CODE HERE
+// Step 1: Create a Date object
+const currentDate = new Date();
+
+// Step 2: Log the full date
+console.log("Q9: Current Date:", currentDate);
+
+//---------- QUESTION 10 --- Date object for current date year, month, date-----
+//Use JavaScript's Date object to retrieve specific parts of the current date. Using the currentDate from Question 9, write three separate lines of code to extract:
+
+//The year using .getFullYear()
+//The month using .getMonth() (remember: months are zero-indexed!)
+//The day using .getDate()
+//Use console.log() to display each value with a descriptive label.
+
+//EXAMPLE CALL:
+//console.log("Q10 Year:", year);
+//console.log("Q10 Month:", month);
+//console.log("Q10 Day:", day);
+
+// EXAMPLE OUTPUT: Note Time will differ, below is an example only
+//Q10 Year: 2025
+//Q10 Month: 9
+//Q10 Day: 13
+
+// PUT YOUR CODE HERE
+// Extract and log the year, month, and day
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth() + 1; // Add 1 to adjust for zero-indexing
+const day = currentDate.getDate();
+
+console.log("Q10 Year:", year);
+console.log("Q10 Month:", month);
+console.log("Q10 Day:", day);
 
 
