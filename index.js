@@ -96,31 +96,38 @@ myPet.describev1 = function () {
 console.log("Q4 v1: ", myPet.describev1());
 
 //---------- QUESTION 5 ----array of objects, for each------
-//Create a variable named pets and assign it an array containing three pet objects. Each object should include two properties: name and species, with appropriate values. Then, define a function called printPets that uses the forEach method to loop through the array and log each pet’s details to the console.
+//Create a variable named pets and assign it an array containing three pet objects. Each object should include three properties: name, species, and color with appropriate values. Then, define a function called printPets that uses the forEach method to loop through the array and log each pet’s details to the console. Note: console.log is called within the function
 
 //EXAMPLE CALL:
 //   const pets = [
-//     { name: "WillBe", species: "bird"},
-//     { name: "Oshie", species: "cat" },
-//     { name: "Sunny", species: "dog" }; ]
+//     { name: "WillBe", species: "bird", color:"gray"},
+//     { name: "Oshie", species: "cat", color: "multi" },
+//     { name: "Sunny", species: "dog", color: "black" } ]
 //
 //  Call the function with the pets array
+//        console.log ("Q5:");
 //        printPets(pets);
 
 // EXAMPLE OUTPUT:
+//Q5:
+//Name: WillBe, Species: bird, Color: gray
+//Name: Oshie, Species: cat, Color: multi
+//Name: Sunny, Species: dog, Color: black
 
 // PUT YOUR CODE HERE
 
 function printPets(pets) {
   //Iterating over the array and printing each pet's details
   pets.forEach((pet) => {
-    console.log(`Name: ${pet.name}, Species: ${pet.species}`);
+    console.log(
+      `Name: ${pet.name}, Species: ${pet.species}, Color: ${pet.color}`
+    );
   });
 }
-
 const pets = [
-  { name: "WillBe", species: "bird" },
-  { name: "Oshie", species: "cat" },
-  { name: "Sunny", species: "dog" },
+  { name: "WillBe", species: "bird", color: "gray" },
+  { name: "Oshie", species: "cat", color: "multi" },
+  { name: "Sunny", species: "dog", color: "black" }
 ];
-printPets(pets);
+        console.log ("Q5:");
+        printPets(pets);
