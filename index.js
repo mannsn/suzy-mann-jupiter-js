@@ -40,48 +40,35 @@ console.log("Q1 name: ", myPet.name);
 console.log("Q1 species: ", myPet.species);
 console.log("Q1 color: ", myPet.color);
 
-// ---------- QUESTION 2 ----------
-// Now let's see how we can use the property:value pairs in template literals.  Create a variable called 'aboutPet' and assign it a template literal that uses the 'myPet' object to make a sentence sharing all the pet details.  The sentence should look something like this: "Teddy is a brown ferret."
 
-// EXAMPLE LOG:
-//    console.log("Q2: ", aboutPet);
-// EXAMPLE OUTPUT:
-//    Q2: Teddy is a brown ferret.
-
-// PUT YOUR CODE HERE
-const aboutPet = `${myPet.name} is a ${myPet.color} ${myPet.species}. `;
-console.log("Q2: ", aboutPet);
-
-// ---------- QUESTION 3 Modifying properties ---------
+// ---------- QUESTION 2 Modifying properties ---------
 // Now let's see how we can modify the properties. Modify the 'name' property of the 'myPet' object. This name should be different than the value used in Question 1 (e.g. Henry ). Use your console.log's to print the myPet console. Verify the 'name' property is different than the value in Question 1.
 
 // EXAMPLE LOG:
-//    console.log("Q3 updated object", myPet);
+//    console.log("Q2 updated object", myPet);
 // EXAMPLE OUTPUT:
-//    Q3 updated object:  {"name":"Henry","species":"ferret","color":"brown"}
+//    Q2 updated object:  {"name":"Henry","species":"ferret","color":"brown"}
 
 // PUT YOUR CODE HERE
 myPet.name = "Henry";
-console.log("Q3 updated object", myPet);
+console.log("Q2 updated object", myPet);
 
-// ---------- QUESTION 4 Looping thru properties ---------
+// ---------- QUESTION 3 Looping thru properties ---------
 // Now let's see how we can loop thru the properties - this is a common task in JavaScript. Use a for...in loop, a special type of loop in JavasScript designed specifically for iterating over the properties of an object.  See https://www.w3schools.com/js/js_loop_forin.asp for reference.
 //  Write a for...in loop that iterates through each property in the myPet object and prints the property name and its value to the console in the following format:
 //Q4: propertyName: propertyValue
 //Use console.log() inside the loop to display each key-value pair.
 
 // EXAMPLE LOG in the loop - replace <..>  :
-//    console.log("Q4: "+ <Supply key here> + ":",  <Supply value here> );
+//    console.log("Q3: "+ <Supply key here> + ":",  <Supply value here> );
 // EXAMPLE OUTPUT:
-//    Q4: name: Henry
-//    Q4: species: ferret
-//    Q4: color: brown
+//    Q3: name: Henry
+//    Q3: species: ferret
+//    Q3: color: brown
 
 // PUT YOUR CODE HERE
 for (let key in myPet) {
-    console.log("Q4: "+ key + ":", myPet[key]);
-}
-
+    console.log("Q3: "+ key + ":", myPet[key]);
 
 
 // ---------- QUESTION 4 ----------
@@ -95,6 +82,8 @@ for (let key in myPet) {
 //    console.log("Q4: ", myPet.describe());
 // EXAMPLE OUTPUT:
 //Q4: Teddy is a brown ferret. 
+
+//Stretch goal: Use "this" keyword.  Instead of referencing the object name directly (e.g., myPet.name), update your method to use the this keyword to access the object's properties. This makes your method more flexible and reusable.
 
 // PUT YOUR CODE HERE
 
