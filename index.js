@@ -122,18 +122,16 @@ console.log("Q5", "Color property deleted:", !myPet.hasOwnProperty('color'));
 
 // EXAMPLE OUTPUT:
 //Q6:
-//Name: WillBe, Species: bird, Color: gray
-//Name: Oshie, Species: cat, Color: multi
-//Name: Sunny, Species: dog, Color: black
+//{ name: 'WillBe', species: 'bird', color: 'gray' }
+//{ name: 'Oshie', species: 'cat', color: 'multi' }
+//{ name: 'Sunny', species: 'dog', color: 'black' }
 
 // PUT YOUR CODE HERE
 
 function printPets(pets) {
   //Iterating over the array and printing each pet's details
   pets.forEach((pet) => {
-    console.log(
-      `Name: ${pet.name}, Species: ${pet.species}, Color: ${pet.color}`
-    );
+    console.log(pet);
   });
 }
 const pets = [
@@ -143,5 +141,38 @@ const pets = [
 ];
 console.log("Q6:");
 printPets(pets);
+
+//---------- QUESTION 7 --- Write a construction function to create Pet objects------
+//Write a JavaScript constructor function named Dog that defines a blueprint for creating Dog objects. Each Dog object should include the following properties: name, breed, and age. Using this constructor, create two distinct Dog instances with different values for each property. Finally, use console.log() to display both Dog instances in the console.
+
+//EXAMPLE CALL:
+// Creating new Dog instances
+//let dog1 = new Dog("Kroger", "greyhound", 8);
+//let dog2 = new Dog("Destiny","shepherd" , 14);
+
+// Displaying the Dog instances
+//console.log("Q7", dog1);
+//console.log("Q7", dog2);
+
+// EXAMPLE OUTPUT:
+//Q7: Dog { name: 'Kroger', bred: 'greyhound', age: 8 }
+//Q7: Dog { name: 'Destiny', bred: 'shepherd', age: 14 }
+
+
+// PUT YOUR CODE HERE
+function Dog (name, breed, age){
+  this.name = name;
+  this.bred = breed;
+  this.age = age;
+}
+
+// Creating new Person instances
+let dog1 = new Dog("Kroger", "greyhound", 8);
+let dog2 = new Dog("Destiny","shepherd" , 14);
+
+// Displaying the Dog instances
+console.log("Q7:", dog1);
+console.log("Q7:", dog2);
+
 
 
