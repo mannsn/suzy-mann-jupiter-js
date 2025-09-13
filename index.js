@@ -95,7 +95,19 @@ myPet.describev1 = function () {
 };
 console.log("Q4 v1: ", myPet.describev1());
 
-//---------- QUESTION 5 ----array of objects, for each------
+//---------- QUESTION 5 ----deleting a property------
+//Using myPet, remove the property color.  Verify the deletion by checking whether the myPet object still has a property named color.  It returns true if the property exists and false otherwise
+
+// EXAMPLE LOG:
+//     console.log("Q5", "Color property deleted:", !myPet.hasOwnProperty('color'));
+// EXAMPLE OUTPUT:
+//Q5 Color property deleted: true
+
+delete myPet.color;
+console.log("Q5", "Color property deleted:", !myPet.hasOwnProperty('color'));
+
+
+//---------- QUESTION 6 ----array of objects, for each------
 //Create a variable named pets and assign it an array containing three pet objects. Each object should include three properties: name, species, and color with appropriate values. Then, define a function called printPets that uses the forEach method to loop through the array and log each pet’s details to the console. Note: console.log is called within the function
 
 //EXAMPLE CALL:
@@ -105,11 +117,11 @@ console.log("Q4 v1: ", myPet.describev1());
 //     { name: "Sunny", species: "dog", color: "black" } ]
 //
 //  Call the function with the pets array
-//        console.log ("Q5:");
+//        console.log ("Q6:");
 //        printPets(pets);
 
 // EXAMPLE OUTPUT:
-//Q5:
+//Q6:
 //Name: WillBe, Species: bird, Color: gray
 //Name: Oshie, Species: cat, Color: multi
 //Name: Sunny, Species: dog, Color: black
@@ -127,7 +139,9 @@ function printPets(pets) {
 const pets = [
   { name: "WillBe", species: "bird", color: "gray" },
   { name: "Oshie", species: "cat", color: "multi" },
-  { name: "Sunny", species: "dog", color: "black" }
+  { name: "Sunny", species: "dog", color: "black" },
 ];
-        console.log ("Q5:");
-        printPets(pets);
+console.log("Q6:");
+printPets(pets);
+
+
