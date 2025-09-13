@@ -67,7 +67,7 @@ console.log("Q2 updated object", myPet);
 
 // PUT YOUR CODE HERE
 for (let key in myPet) {
-    console.log("Q3: "+ key + ":", myPet[key]);
+  console.log("Q3: " + key + ":", myPet[key]);
 }
 
 // ---------- QUESTION 4 ----------
@@ -80,17 +80,47 @@ for (let key in myPet) {
 // EXAMPLE LOG:
 //    console.log("Q4: ", myPet.describe());
 // EXAMPLE OUTPUT:
-//Q4: Teddy is a brown ferret. 
+//Q4: Teddy is a brown ferret.
 
 //Stretch goal: Use "this" keyword.  Instead of referencing the object name directly (e.g., myPet.name), update your method to use the this keyword to access the object's properties. This makes your method more flexible and reusable.
 
 // PUT YOUR CODE HERE
-myPet.describe = function() {
-  return `${myPet.name} is a ${myPet.color} ${myPet.species}. `
-}
+myPet.describe = function () {
+  return `${myPet.name} is a ${myPet.color} ${myPet.species}. `;
+};
 console.log("Q4: ", myPet.describe());
 
-myPet.describev1 = function() {
-  return `${this.name} is a ${this.color} ${this.species}. `
-}
+myPet.describev1 = function () {
+  return `${this.name} is a ${this.color} ${this.species}. `;
+};
 console.log("Q4 v1: ", myPet.describev1());
+
+//---------- QUESTION 5 ----array of objects, for each------
+//Create a variable named pets and assign it an array containing three pet objects. Each object should include two properties: name and species, with appropriate values. Then, define a function called printPets that uses the forEach method to loop through the array and log each pet’s details to the console.
+
+//EXAMPLE CALL:
+//   const pets = [
+//     { name: "WillBe", species: "bird"},
+//     { name: "Oshie", species: "cat" },
+//     { name: "Sunny", species: "dog" }; ]
+//
+//  Call the function with the pets array
+//        printPets(pets);
+
+// EXAMPLE OUTPUT:
+
+// PUT YOUR CODE HERE
+
+function printPets(pets) {
+  //Iterating over the array and printing each pet's details
+  pets.forEach((pet) => {
+    console.log(`Name: ${pet.name}, Species: ${pet.species}`);
+  });
+}
+
+const pets = [
+  { name: "WillBe", species: "bird" },
+  { name: "Oshie", species: "cat" },
+  { name: "Sunny", species: "dog" },
+];
+printPets(pets);
