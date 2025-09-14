@@ -86,12 +86,12 @@ for (let key in myPet) {
 
 // PUT YOUR CODE HERE
 myPet.describe = function () {
-  return `${myPet.name} is a ${myPet.color} ${myPet.species}. `;
+  return `${myPet.name} is a ${myPet.color} ${myPet.species}.`;
 };
 console.log("Q4: ", myPet.describe());
 
 myPet.describev1 = function () {
-  return `${this.name} is a ${this.color} ${this.species}. `;
+  return `${this.name} is a ${this.color} ${this.species}.`;
 };
 console.log("Q4 v1: ", myPet.describev1());
 
